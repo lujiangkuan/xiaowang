@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>小王要学习</title>
+  <style>
+    .video-container {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    video {
+      width: 100%;
+    }
+    .playback-speed {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1;
+    }
+	.big{
+		background-image: url(img/微信图片_20230903085150.jpg);
+		background-size: 300px;
+	}
+	#jindai1{
+		
+	}
+  </style>
+</head>
+<body>
+	<div class="big">
+	<div class="video-container">
+	  <div id="jindai1">
+	  	<p style="color: blue;">中国近代史1</p>
+	  	  <br />
+	  	<video class="myVideo" controls>
+	  	  <source src="video/理论精讲-中国近代史1.mp4" type="video/mp4">
+	  	</video>
+	  </div>
+	  
+	<div id="jindai2">
+		<p style="color: blue;">中国近代史2</p>
+		  <br />
+		<video class="myVideo" controls>
+		  <source src="video/理论精讲-中国近代史2.mp4" type="video/mp4">
+		</video>
+	</div>
+	
+	<div id="jindai3">
+		<p style="color: blue;">中国近代史3</p>
+		  <br />
+		<video ="myVideo" controls>
+		  <source src="video/理论精讲-中国近代史3.mp4" type="video/mp4">
+		</video>
+	</div>
+	
+   <!-- <div class="playback-speed">
+      <label for="speed">倍速:</label>
+      <select id="speed">
+        <option value="0.25">0.25x</option>
+        <option value="0.5">0.5x</option>
+        <option value="1" selected>1x</option>
+        <option value="2">2x</option>
+        <option value="4">4x</option>
+      </select>
+    </div> -->
+  </div>
+</div>
+</body>
+</html>
+<script>
+    const video = document.getElementById('myVideo');
+    const speedSelect = document.getElementById('speed');
+
+    speedSelect.addEventListener('change', function() {
+      video.playbackRate = parseFloat(speedSelect.value);
+    });
+  </script>
